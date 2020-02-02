@@ -29,7 +29,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use("simonsimcity:job-collection@" + currentVersion, [
+  api.use("elevenyellow:job-collection@" + currentVersion, [
     "server",
     "client"
   ]);
@@ -37,7 +37,7 @@ Package.onTest(function(api) {
   api.use("ecmascript@0.14.1", ["server", "client"]);
   api.use("check@1.3.1", ["server", "client"]);
   api.use("meteortesting:mocha@1.0.0", ["server", "client"]);
-  api.use("ddp@1.2.5", "client");
+  api.use("ddp@1.4.0", "client");
 
   Npm.depends({
     chai: "4.1.2"
