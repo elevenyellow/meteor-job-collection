@@ -4,7 +4,7 @@
 ###     See included LICENSE file for details.
 ***************************************************************************/
 
-var currentVersion = "2.0.0";
+var currentVersion = "1.7.0";
 
 Package.describe({
   summary:
@@ -17,9 +17,9 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.use("mrt:later@1.6.1", ["server", "client"]);
-  api.use("ecmascript@0.9.0", ["server", "client"]);
-  api.use("mongo@1.1.18", ["server", "client"]);
-  api.use("check@1.2.5", ["server", "client"]);
+  api.use("ecmascript@0.14.1", ["server", "client"]);
+  api.use("mongo@1.8.1", ["server", "client"]);
+  api.use("check@1.3.1", ["server", "client"]);
   api.mainModule("src/server.js", "server");
   api.mainModule("src/client.js", "client");
 
@@ -34,8 +34,8 @@ Package.onTest(function(api) {
     "client"
   ]);
   api.use("mrt:later@1.6.1", ["server", "client"]);
-  api.use("ecmascript@0.9.0", ["server", "client"]);
-  api.use("check@1.2.5", ["server", "client"]);
+  api.use("ecmascript@0.14.1", ["server", "client"]);
+  api.use("check@1.3.1", ["server", "client"]);
   api.use("meteortesting:mocha@1.0.0", ["server", "client"]);
   api.use("ddp@1.2.5", "client");
 
