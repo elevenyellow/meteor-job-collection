@@ -9,10 +9,10 @@ var currentVersion = "1.7.0";
 Package.describe({
   summary:
     "A persistent and reactive job queue for Meteor, supporting distributed workers that can run anywhere",
-  name: "elevenyellow:job-collection",
+  name: "garbolino:job-collection",
   version: currentVersion,
-  documentation: "../../README.md",
-  git: "https://github.com/simonsimcity/meteor-job-collection.git"
+  documentation: "./README.md",
+  git: "https://github.com/elevenyellow/meteor-job-collection.git"
 });
 
 Package.onUse(function(api) {
@@ -29,10 +29,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use("elevenyellow:job-collection@" + currentVersion, [
-    "server",
-    "client"
-  ]);
+  api.use("garbolino:job-collection@" + currentVersion, ["server", "client"]);
   api.use("mrt:later@1.6.1", ["server", "client"]);
   api.use("ecmascript@0.14.1", ["server", "client"]);
   api.use("check@1.3.1", ["server", "client"]);
